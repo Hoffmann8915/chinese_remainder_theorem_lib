@@ -1,6 +1,6 @@
 [project]
 name = "chinese-remainder-theorem-lib"
-version = "0.1.0"
+version = "0.1.1"
 description = "Finds the unique solution to a system of simultaneous modular congruences with pairwise-coprime moduli."
 requires-python = ">=3.10"
 dependencies = []
