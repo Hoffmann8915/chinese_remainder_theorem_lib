@@ -29,3 +29,10 @@ Standard library `pow(a, -1, m)` exists in Python 3.8+ for modular inverse, but 
 ## Edge cases
 
 Negative residues are accepted and reduced modulo their modulus before solving. A modulus of 1 makes its congruence trivially satisfied (everything is 0 mod 1). Moduli must be positive integers; passing 0 or a negative value raises `ValueError`. The result is always in the range `[0, product_of_moduli)`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
